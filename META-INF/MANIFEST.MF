@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CustomFindBugsDetector
+Bundle-SymbolicName: com.leleliu008.fb; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: com.leleliu008
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: edu.umd.cs.findbugs.plugin.eclipse

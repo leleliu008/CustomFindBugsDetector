@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="messagecollection.xsd">
+	<Plugin>
+		<ShortDescription>CustomFindBugsDetector</ShortDescription>
+		<Details><![CDATA[<p>This plugin is CustomFindBugsDetector. </p>]]></Details>
+	</Plugin>
+	<Detector class="com.leleliu008.fb.SystemOutOrErrorDetector">
+		<Details><![CDATA[<p>Checks for classes used System.out() or System.error() or e.println() </p>]]></Details>
+	</Detector>
+	<BugPattern type="CHECK_SYSTEMCLASS">
+		<ShortDescription>System.out() or System.error() or e.println() used</ShortDescription>
+		<LongDescription>checks method.Changes to logger if needed.</LongDescription>
+		<Details><![CDATA[<p>System.out() or System.error() or e.println() used.</p>]]></Details>
+	</BugPattern>
+	<BugCode abbrev="SU">System.out() or System.error() or e.println() used</BugCode>
+	
+	<Plugin>
+		<ShortDescription>AndroidLogDetector</ShortDescription>
+		<Details><![CDATA[<p>This plugin is detect Android Log used. </p>]]></Details>
+	</Plugin>
+	<Detector class="com.leleliu008.fb.android.LogDetector">
+		<Details><![CDATA[<p>Checks for classes used android.util.Log. </p>]]></Details>
+	</Detector>
+	<BugPattern type="ANDROID_LOG">
+		<ShortDescription>android.util.Log used</ShortDescription>
+		<LongDescription>checks method.Changes to logger if needed.</LongDescription>
+		<Details><![CDATA[<p>android.util.Log used.</p>]]></Details>
+	</BugPattern>
+	<BugCode abbrev="SU">android.util.Log used</BugCode>
+	
+	<Plugin>
+		<ShortDescription>SystemGCDetector</ShortDescription>
+		<Details><![CDATA[<p>This plugin is detect System.gc() used. </p>]]></Details>
+	</Plugin>
+	<Detector class="com.leleliu008.fb.SystemGCDetector">
+		<Details><![CDATA[<p>Checks for classes used System.gc(). </p>]]></Details>
+	</Detector>
+	<BugPattern type="SYSTEM_GC">
+		<ShortDescription>System.gc() used</ShortDescription>
+		<LongDescription>System.gc() used.</LongDescription>
+		<Details><![CDATA[<p>System.gc() used.</p>]]></Details>
+	</BugPattern>
+	<BugCode abbrev="SU">System.gc() used</BugCode>
+</MessageCollection>

@@ -1,0 +1,22 @@
+<FindbugsPlugin 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="findbugsplugin.xsd" 
+    pluginid="com.leleliu008.fb"
+    defaultenabled="true"
+	provider="com.leleliu008" 
+	website="http://fb-contrib.sourceforge.net">
+	<Detector
+	    class="com.leleliu008.fb.SystemOutOrErrorDetector"
+		speed="fast" reports="CHECK_SYSTEMCLASS" hidden="false" />
+	<BugPattern abbrev="SU" type="CHECK_SYSTEMCLASS" category="Experimental" />
+	
+	<Detector
+	    class="com.leleliu008.fb.android.LogDetector"
+		speed="fast" reports="ANDROID_LOG" hidden="false" />
+	<BugPattern abbrev="SU" type="ANDROID_LOG" category="Experimental" />
+
+	<Detector
+	    class="com.leleliu008.fb.SystemGCDetector"
+		speed="fast" reports="SYSTEM_GC" hidden="false" />
+	<BugPattern abbrev="SU" type="SYSTEM_GC" category="Experimental" />
+</FindbugsPlugin>

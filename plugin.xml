@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin id="com.leleliu008.fb" name="CustomFindBugsDetector" version="1.0.0">
+	<extension 
+		point="edu.umd.cs.findbugs.plugin.eclipse.findbugsPlugins">
+		<findbugsPlugin fbPluginId="com.leleliu008.fb" libraryPath="."/>
+	</extension>
+</plugin>
